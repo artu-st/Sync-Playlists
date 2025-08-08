@@ -1,0 +1,20 @@
+{
+  "recycle_bin": "output/recycle_bin",
+  "paths": [
+    {
+      "type": "windows",
+      "base": "\\\\segofile001\\Unit\\Artu\\",
+      "playlist_dir": "C:\\Users\\artu_\\OneDrive\\Music\\Playlists"
+    },
+    {
+      "type": "synology",
+      "base": "../../../volume2/Unit/Artu/",
+      "playlist_dir": "\\\\segofile001\\music\\playlists"
+    },
+    {
+      "type": "jellyfin",
+      "base": "",
+      "playlist_dir": "C:\\Users\\artu_\\OneDrive\\Desktop\\test"
+    }
+  ] 
+}
