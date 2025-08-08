@@ -1,20 +1,24 @@
 {
   "recycle_bin": "output/recycle_bin",
   "paths": [
-    {
-      "type": "windows",
+    { 
+      "id": "Windows",
+      "type": "m3u8",
       "base": "\\\\segofile001\\Unit\\Artu\\",
       "playlist_dir": "C:\\Users\\artu_\\OneDrive\\Music\\Playlists"
     },
     {
-      "type": "synology",
+      "id": "Synology",
+      "type": "m3u",
       "base": "../../../volume2/Unit/Artu/",
       "playlist_dir": "\\\\segofile001\\music\\playlists"
-    },
+    }, 
     {
-      "type": "jellyfin",
+      "id": "Jellyfin",
+      "type": "xml",
       "base": "",
       "playlist_dir": "C:\\Users\\artu_\\OneDrive\\Desktop\\test"
-    }
-  ] 
+    }   
+  ],
+  "apis": []
 }

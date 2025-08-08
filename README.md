@@ -36,22 +36,21 @@ El sistema detecta cambios en cualquiera de las carpetas monitorizadas y replica
 2. **Descargar o clonar el repositorio**
 
    ```bash
-   git clone https://tu-repo-url.git
-   cd nombre-del-repositorio
+   git clone https://github.com/artu-st/Sync-Playlists.git
+   cd Sync-Playlists
 
 
 ## Configuración
 
 El archivo `config.json` debe contener la configuración de rutas y tipos. 
 
+recycle_bin: Carpeta donde se moverán las listas eliminadas para recuperación.
 paths: Lista de ubicaciones donde se almacenan y sincronizan las listas de reproducción.
-type: Define el tipo de sistema y formato:
-    "windows": usa listas en formato .m3u8.
-    "synology": usa listas en formato .m3u.
-    "jellyfin": usa listas en formato .xml.
+id: Nombre de la conexion.
+type: Define el tipo de sistema y formato(.m3u8, .m3u, .xml).
 base: Ruta base donde están los archivos musicales. Se usa para calcular rutas relativas dentro de las listas.
 playlist_dir: Carpeta donde se guardan y monitorizan las listas de reproducción para ese sistema.
-recycle_bin: Carpeta donde se moverán las listas eliminadas para recuperación.
+apis: Lista de apis externas para syncronizar listas de reproduccion en plataformas como Jellyfin, Spotyfy...
 
 por ejemplo:
 
@@ -60,19 +59,23 @@ por ejemplo:
   "recycle_bin": "D:/Playlists_Recicladas",
   "paths": [
     {
-      "type": "windows",
+      "id": "Windows",
+      "type": "m3u8",
       "base": "D:/Music",
       "playlist_dir": "D:/Music/Playlists"
     },
     {
-      "type": "synology",
+      "id": "Synology",
+      "type": "m3u",
       "base": "/volume1/music",
       "playlist_dir": "/volume1/music/Playlists"
     },
     {
-      "type": "jellyfin",
+      "id": "Jellyfin",
+      "type": "xml",
       "base": "/mnt/media/music",
       "playlist_dir": "D:/Jellyfin/Config/playlists"
     }
-  ] 
+  ],
+  "apis": []
 }
